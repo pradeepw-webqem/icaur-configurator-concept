@@ -5,9 +5,11 @@ var colors = [
   {name:'Deep Emerald Green', hex:'#0f3d2e'},
   {name:'Obsidian Black', hex:'#1a1a1a'},
   {name:'Glacier Silver', hex:'#c3c7c9'},
-  {name:'Auric Gold Yellow', hex:'#d4a017'},
+  {name:'Auric Gold Yellow', hex:'#cda54a'},
   {name:'Basalt Grey', hex:'#58595b'}
 ];
+
+var DEFAULT_COLOR_IDX = 5;
 
 var trims = [
   {name:'Classic', weight:2119, topSpeed:170, accel:8.9},
@@ -15,7 +17,7 @@ var trims = [
   {name:'Flagship', weight:2355, topSpeed:180, accel:5.9}
 ];
 
-var state = { colorIdx:0, trimIdx:0 };
+var state = { colorIdx:DEFAULT_COLOR_IDX, trimIdx:0 };
 var currentTrimStats = Object.assign({}, trims[0]);
 
 var swatchGrid = document.getElementById('swatchGrid');
@@ -23,7 +25,7 @@ var trimSegmented = document.getElementById('trimSegmented');
 
 colors.forEach(function(c, i){
   var el = document.createElement('div');
-  el.className = 'swatch' + (i === 0 ? ' selected' : '');
+  el.className = 'swatch' + (i === DEFAULT_COLOR_IDX ? ' selected' : '');
   el.style.background = c.hex;
   el.title = c.name;
   el.addEventListener('click', function(){ selectColor(i); });
@@ -69,20 +71,28 @@ function colorSlug(name){
 
 function updateVehicleImage(colorObj){
   var slug = colorSlug(colorObj.name);
-  var path = 'images/v27-' + slug + '.jpg';
+  var exts = ['jpg', 'jpeg', 'png', 'webp'];
   var photoEl = document.getElementById('vehiclePhoto');
   var svgWrap = document.getElementById('vehicleSvgWrap');
-  var tester = new Image();
-  tester.onload = function(){
-    photoEl.src = path;
-    photoEl.style.display = 'block';
-    svgWrap.style.display = 'none';
-  };
-  tester.onerror = function(){
-    photoEl.style.display = 'none';
-    svgWrap.style.display = 'block';
-  };
-  tester.src = path;
+  var idx = 0;
+  function tryNext(){
+    if (idx >= exts.length) {
+      photoEl.style.display = 'none';
+      svgWrap.style.display = 'block';
+      return;
+    }
+    var path = 'images/v27-' + slug + '.' + exts[idx];
+    idx++;
+    var tester = new Image();
+    tester.onload = function(){
+      photoEl.src = path;
+      photoEl.style.display = 'block';
+      svgWrap.style.display = 'none';
+    };
+    tester.onerror = tryNext;
+    tester.src = path;
+  }
+  tryNext();
 }
 
 function selectColor(i){
@@ -152,5 +162,4 @@ function launchConfetti(){
 }
 
 positionPill();
-document.documentElement.style.setProperty('--body-color', colors[0].hex);
-updateVehicleImage(colors[0]);
+selectColor(DEFAULT_COLOR_IDX);
