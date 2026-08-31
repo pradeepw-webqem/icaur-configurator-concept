@@ -11,154 +11,154 @@
 <body>
 
 <nav class="navbar">
-  <div class="nav-left" id="navLeft">
-    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-    <div class="nav-item">MODELS</div>
-    <div class="nav-item">ABOUT iCAUR</div>
-    <div class="nav-item">iCAUR LIFE</div>
-  </div>
-  <div class="logo">iCAUR</div>
-  <div class="nav-right">
-    <a href="#" class="nav-link">ENQUIRE</a>
-    <a href="#" class="nav-link">CONTACT US</a>
-    <button class="account-btn" aria-label="Account">
-      <svg viewBox="0 0 24 24"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5Z"/></svg>
-    </button>
-  </div>
+<div class="nav-left" id="navLeft">
+<button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="nav-item">MODELS</div>
+<div class="nav-item">ABOUT iCAUR</div>
+<div class="nav-item">iCAUR LIFE</div>
+</div>
+<div class="logo">iCAUR</div>
+<div class="nav-right">
+<a href="#" class="nav-link">ENQUIRE</a>
+<a href="#" class="nav-link">CONTACT US</a>
+<button class="account-btn" aria-label="Account">
+<svg viewBox="0 0 24 24"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5Z"/></svg>
+</button>
+</div>
 </nav>
 
 <main class="configurator">
-  <section class="stage-section">
-    <div class="stage-bg">
-      <div class="bg-sky"></div>
-      <div class="bg-hills"></div>
-      <div class="bg-hills back"></div>
-    </div>
+<section class="stage-section">
+<div class="stage-bg">
+<div class="bg-sky"></div>
+<div class="bg-hills"></div>
+<div class="bg-hills back"></div>
+</div>
 
-    <div class="model-heading">
-      <span class="model-eyebrow">iCAUR</span>
-      <h1>V27</h1>
-      <p>All-Round Hybrid SUV &middot; Classic Style &middot; Electric Drive</p>
-    </div>
+<div class="model-heading">
+<span class="model-eyebrow">iCAUR</span>
+<h1>V27</h1>
+<p>All-Round Hybrid SUV &middot; Classic Style &middot; Electric Drive</p>
+</div>
 
-    <div class="viewer-controls right-controls">
-      <button class="icon-btn" id="rotateLeft" title="Rotate left">&lsaquo;</button>
-      <button class="icon-btn" id="rotateRight" title="Rotate right">&rsaquo;</button>
-      <button class="icon-btn active" id="playSpin" title="Spin wheels">&#9654;</button>
-    </div>
+<div class="viewer-controls right-controls">
+<button class="icon-btn" id="rotateLeft" title="Rotate left">&lsaquo;</button>
+<button class="icon-btn" id="rotateRight" title="Rotate right">&rsaquo;</button>
+<button class="icon-btn active" id="playSpin" title="Spin wheels">&#9654;</button>
+</div>
 
-    <div class="vehicle-stage" id="vehicleStage">
-      <img id="vehiclePhoto" alt="iCAUR V27" style="display:none;">
-      <div id="vehicleSvgWrap">
-        <svg id="carSvg" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
-          <ellipse class="car-shadow" cx="400" cy="368" rx="290" ry="18"/>
-          <g id="carBody">
-            <path class="body-main" d="M115,265 L155,185 Q195,142 258,142 L522,142 Q582,142 615,185 L662,265 L662,305 L115,305 Z"/>
-            <path class="cabin-glass" d="M232,182 L272,152 L468,152 L508,182 Z"/>
-            <line class="pillar" x1="350" y1="152" x2="350" y2="182"/>
-            <rect class="roof-rail" x="258" y="134" width="264" height="8" rx="4"/>
-            <rect class="bumper" x="104" y="258" width="22" height="34" rx="5"/>
-            <rect class="bumper" x="654" y="258" width="22" height="34" rx="5"/>
-            <rect class="grille" x="648" y="222" width="18" height="34" rx="2"/>
-            <rect class="headlight" x="652" y="198" width="16" height="11" rx="3"/>
-            <rect class="taillight" x="118" y="200" width="10" height="16" rx="2"/>
-            <text class="badge-text" x="560" y="235">V27</text>
-          </g>
-          <g class="wheel" id="wheelBack" style="transform-origin:205px 305px;">
-            <circle class="tyre" cx="205" cy="305" r="47"/>
-            <circle class="rim" cx="205" cy="305" r="27"/>
-            <g class="spokes">
-              <line x1="205" y1="281" x2="205" y2="329"/>
-              <line x1="181" y1="305" x2="229" y2="305"/>
-              <line x1="188" y1="288" x2="222" y2="322"/>
-              <line x1="188" y1="322" x2="222" y2="288"/>
-            </g>
-            <circle class="hub" cx="205" cy="305" r="7"/>
-          </g>
-          <g class="wheel" id="wheelFront" style="transform-origin:572px 305px;">
-            <circle class="tyre" cx="572" cy="305" r="47"/>
-            <circle class="rim" cx="572" cy="305" r="27"/>
-            <g class="spokes">
-              <line x1="572" y1="281" x2="572" y2="329"/>
-              <line x1="548" y1="305" x2="596" y2="305"/>
-              <line x1="555" y1="288" x2="589" y2="322"/>
-              <line x1="555" y1="322" x2="589" y2="288"/>
-            </g>
-            <circle class="hub" cx="572" cy="305" r="7"/>
-          </g>
-        </svg>
-      </div>
-    </div>
+<div class="vehicle-stage" id="vehicleStage">
+<img id="vehiclePhoto" alt="iCAUR V27" style="display:none;">
+<div id="vehicleSvgWrap">
+<svg id="carSvg" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+<ellipse class="car-shadow" cx="400" cy="368" rx="290" ry="18"/>
+<g id="carBody">
+<path class="body-main" d="M115,265 L155,185 Q195,142 258,142 L522,142 Q582,142 615,185 L662,265 L662,305 L115,305 Z"/>
+<path class="cabin-glass" d="M232,182 L272,152 L468,152 L508,182 Z"/>
+<line class="pillar" x1="350" y1="152" x2="350" y2="182"/>
+<rect class="roof-rail" x="258" y="134" width="264" height="8" rx="4"/>
+<rect class="bumper" x="104" y="258" width="22" height="34" rx="5"/>
+<rect class="bumper" x="654" y="258" width="22" height="34" rx="5"/>
+<rect class="grille" x="648" y="222" width="18" height="34" rx="2"/>
+<rect class="headlight" x="652" y="198" width="16" height="11" rx="3"/>
+<rect class="taillight" x="118" y="200" width="10" height="16" rx="2"/>
+<text class="badge-text" x="560" y="235">V27</text>
+</g>
+<g class="wheel" id="wheelBack" style="transform-origin:205px 305px;">
+<circle class="tyre" cx="205" cy="305" r="47"/>
+<circle class="rim" cx="205" cy="305" r="27"/>
+<g class="spokes">
+<line x1="205" y1="281" x2="205" y2="329"/>
+<line x1="181" y1="305" x2="229" y2="305"/>
+<line x1="188" y1="288" x2="222" y2="322"/>
+<line x1="188" y1="322" x2="222" y2="288"/>
+</g>
+<circle class="hub" cx="205" cy="305" r="7"/>
+</g>
+<g class="wheel" id="wheelFront" style="transform-origin:572px 305px;">
+<circle class="tyre" cx="572" cy="305" r="47"/>
+<circle class="rim" cx="572" cy="305" r="27"/>
+<g class="spokes">
+<line x1="572" y1="281" x2="572" y2="329"/>
+<line x1="548" y1="305" x2="596" y2="305"/>
+<line x1="555" y1="288" x2="589" y2="322"/>
+<line x1="555" y1="322" x2="589" y2="288"/>
+</g>
+<circle class="hub" cx="572" cy="305" r="7"/>
+</g>
+</svg>
+</div>
+</div>
 
-    <div class="stat-bar" id="statBar">
-      <div class="stat-card"><span class="stat-value" data-stat="power">100</span><span class="stat-unit">kW</span><span class="stat-label">Max Power</span></div>
-      <div class="stat-card"><span class="stat-value" data-stat="torque">220</span><span class="stat-unit">N&middot;m</span><span class="stat-label">Max Torque</span></div>
-      <div class="stat-card"><span class="stat-value" data-stat="accel">8.9</span><span class="stat-unit">s</span><span class="stat-label">0-100km/h</span></div>
-      <div class="stat-card"><span class="stat-value" data-stat="topspeed">170</span><span class="stat-unit">km/h</span><span class="stat-label">Top Speed</span></div>
-      <div class="stat-card"><span class="stat-value" data-stat="weight">2119</span><span class="stat-unit">kg</span><span class="stat-label">Kerb Weight</span></div>
-    </div>
-  </section>
+<div class="stat-bar" id="statBar">
+<div class="stat-card"><span class="stat-value" data-stat="power">100</span><span class="stat-unit">kW</span><span class="stat-label">Max Power</span></div>
+<div class="stat-card"><span class="stat-value" data-stat="torque">220</span><span class="stat-unit">N&middot;m</span><span class="stat-label">Max Torque</span></div>
+<div class="stat-card"><span class="stat-value" data-stat="accel">8.9</span><span class="stat-unit">s</span><span class="stat-label">0-100km/h</span></div>
+<div class="stat-card"><span class="stat-value" data-stat="topspeed">170</span><span class="stat-unit">km/h</span><span class="stat-label">Top Speed</span></div>
+<div class="stat-card"><span class="stat-value" data-stat="weight">2119</span><span class="stat-unit">kg</span><span class="stat-label">Kerb Weight</span></div>
+</div>
+</section>
 
-  <aside class="config-panel" id="configPanel">
-    <div class="panel-scroll">
-      <p class="section-label">Exterior</p>
-      <h2 class="section-title">Colour — <span id="colorName">Desert Bronze</span></h2>
-      <div class="swatch-grid" id="swatchGrid"></div>
+<aside class="config-panel" id="configPanel">
+<div class="panel-scroll">
+<p class="section-label">Exterior</p>
+<h2 class="section-title">Colour — <span id="colorName">Desert Bronze</span></h2>
+<div class="swatch-grid" id="swatchGrid"></div>
 
-      <p class="section-label with-divider">Trim</p>
-      <h2 class="section-title small">Variant — <span id="trimName">Classic</span></h2>
-      <div class="segmented" id="trimSegmented"></div>
+<p class="section-label with-divider">Trim</p>
+<h2 class="section-title small">Variant — <span id="trimName">Classic</span></h2>
+<div class="segmented" id="trimSegmented"></div>
 
-      <p class="section-label with-divider">Dimensions</p>
-      <div class="spec-grid">
-        <div class="spec-item"><span>Length</span><strong>5045 mm</strong></div>
-        <div class="spec-item"><span>Width</span><strong>1976 mm</strong></div>
-        <div class="spec-item"><span>Height</span><strong>1894 mm</strong></div>
-        <div class="spec-item"><span>Wheelbase</span><strong>2900 mm</strong></div>
-      </div>
+<p class="section-label with-divider">Dimensions</p>
+<div class="spec-grid">
+<div class="spec-item"><span>Length</span><strong>5045 mm</strong></div>
+<div class="spec-item"><span>Width</span><strong>1976 mm</strong></div>
+<div class="spec-item"><span>Height</span><strong>1894 mm</strong></div>
+<div class="spec-item"><span>Wheelbase</span><strong>2900 mm</strong></div>
+</div>
 
-      <p class="section-label with-divider">Cabin &amp; Cargo</p>
-      <div class="feature-list">
-        <div class="feature-row">715L cargo, seats up &middot; 1818L, seats folded</div>
-        <div class="feature-row">950mm second-row knee room</div>
-        <div class="feature-row">15.4" 2.5K HD central display</div>
-        <div class="feature-row">15-speaker sound system</div>
-        <div class="feature-row">6-way power driver's seat with memory</div>
-      </div>
+<p class="section-label with-divider">Cabin &amp; Cargo</p>
+<div class="feature-list">
+<div class="feature-row">715L cargo, seats up &middot; 1818L, seats folded</div>
+<div class="feature-row">950mm second-row knee room</div>
+<div class="feature-row">15.4" 2.5K HD central display</div>
+<div class="feature-row">15-speaker sound system</div>
+<div class="feature-row">6-way power driver's seat with memory</div>
+</div>
 
-      <p class="disclaimer">Images shown are for illustrative purposes only; final specification may vary by market.</p>
-    </div>
-  </aside>
+<p class="disclaimer">Images shown are for illustrative purposes only; final specification may vary by market.</p>
+</div>
+</aside>
 </main>
 
 <footer class="summary-bar">
-  <div class="summary-tabs" id="summaryTabs">
-    <span class="tag" id="tagColor">Desert Bronze</span>
-    <span class="tag" id="tagTrim">Classic</span>
-    <span class="tag">Hybrid</span>
-  </div>
-  <div class="summary-info">
-    <span class="model-name">V27</span>
-    <span class="model-desc">All-Round Hybrid SUV &nbsp;|&nbsp; 5 seater</span>
-  </div>
-  <div class="icon-group">
-    <button class="round-btn" id="saveBtn" title="Save"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></button>
-    <button class="round-btn" id="shareBtn" title="Share"><svg viewBox="0 0 24 24"><path d="M18 8a3 3 0 1 0-2.83-4H15a3 3 0 0 0 .06 2.12L8.9 9.09a3 3 0 1 0 0 5.82l6.16 3a3 3 0 1 0 .77-1.79l-6.16-3a3 3 0 0 0 0-1.24l6.16-3A3 3 0 0 0 18 8Z"/></svg></button>
-  </div>
-  <button class="order-btn" id="orderBtn"><span>ENQUIRE NOW</span></button>
+<div class="summary-tabs" id="summaryTabs">
+<span class="tag" id="tagColor">Desert Bronze</span>
+<span class="tag" id="tagTrim">Classic</span>
+<span class="tag">Hybrid</span>
+</div>
+<div class="summary-info">
+<span class="model-name">V27</span>
+<span class="model-desc">All-Round Hybrid SUV &nbsp;|&nbsp; 5 seater</span>
+</div>
+<div class="icon-group">
+<button class="round-btn" id="saveBtn" title="Save"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></button>
+<button class="round-btn" id="shareBtn" title="Share"><svg viewBox="0 0 24 24"><path d="M18 8a3 3 0 1 0-2.83-4H15a3 3 0 0 0 .06 2.12L8.9 9.09a3 3 0 1 0 0 5.82l6.16 3a3 3 0 1 0 .77-1.79l-6.16-3a3 3 0 0 0 0-1.24l6.16-3A3 3 0 0 0 18 8Z"/></svg></button>
+</div>
+<button class="order-btn" id="orderBtn"><span>ENQUIRE NOW</span></button>
 </footer>
 
 <div class="modal-overlay" id="modalOverlay">
-  <div class="confetti-layer" id="confettiLayer"></div>
-  <div class="modal-card">
-    <svg class="check-circle" viewBox="0 0 100 100">
-      <circle class="check-ring" cx="50" cy="50" r="44"/>
-      <path class="check-path" d="M28 52 L44 68 L74 34"/>
-    </svg>
-    <h3>Enquiry Received</h3>
-    <p>Thanks for your interest in the V27 in <strong id="modalColor">Desert Bronze</strong>, <strong id="modalTrim">Classic</strong> trim. A dealer will be in touch shortly.</p>
-    <button class="order-btn ghost" id="modalClose">CONTINUE BROWSING</button>
-  </div>
+<div class="confetti-layer" id="confettiLayer"></div>
+<div class="modal-card">
+<svg class="check-circle" viewBox="0 0 100 100">
+<circle class="check-ring" cx="50" cy="50" r="44"/>
+<path class="check-path" d="M28 52 L44 68 L74 34"/>
+</svg>
+<h3>Enquiry Received</h3>
+<p>Thanks for your interest in the V27 in <strong id="modalColor">Desert Bronze</strong>, <strong id="modalTrim">Classic</strong> trim. A dealer will be in touch shortly.</p>
+<button class="order-btn ghost" id="modalClose">CONTINUE BROWSING</button>
+</div>
 </div>
 
 <script src="script.js"></script>
