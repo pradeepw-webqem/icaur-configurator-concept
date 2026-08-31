@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V23 Configurator — ICAR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-left" id="navLeft">
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-item dropdown">MODELS <svg class="chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="dropdown-panel">
+        <a href="#">V23 Off-Roader</a>
+        <a href="#">V18 Trail</a>
+        <a href="#">E-Series</a>
+      </div>
+    </div>
+    <div class="nav-item dropdown">OFFERS <svg class="chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="dropdown-panel">
+        <a href="#">Finance Offers</a>
+        <a href="#">Trade-in Bonus</a>
+      </div>
+    </div>
+    <div class="nav-item dropdown">BORN TO PLAY <svg class="chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="dropdown-panel">
+        <a href="#">Adventures</a>
+        <a href="#">Community</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="logo">ICAR</div>
+
+  <div class="nav-right">
+    <a href="#" class="nav-link">ENQUIRE</a>
+    <a href="#" class="nav-link">DEALER LOCATIONS</a>
+    <button class="account-btn" aria-label="Account">
+      <svg viewBox="0 0 24 24"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5Z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main class="configurator">
+  <section class="stage-section">
+    <div class="stage-bg">
+      <div class="bg-sky"></div>
+      <div class="bg-hills"></div>
+      <div class="bg-hills back"></div>
+    </div>
+
+    <div class="viewer-controls left-controls">
+      <button class="badge-btn" title="Augmented Reality">AR</button>
+      <button class="badge-btn" title="360 View">360</button>
+    </div>
+
+    <div class="viewer-controls right-controls">
+      <button class="icon-btn" id="rotateLeft" title="Rotate left">&lsaquo;</button>
+      <button class="icon-btn" id="rotateRight" title="Rotate right">&rsaquo;</button>
+      <button class="icon-btn active" id="playSpin" title="Spin wheels">&#9654;</button>
+    </div>
+
+    <div class="vehicle-stage" id="vehicleStage">
+      <svg id="carSvg" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+        <ellipse class="car-shadow" cx="400" cy="368" rx="290" ry="18"/>
+
+        <g id="carBody">
+          <path class="body-main" d="M115,265 L155,185 Q195,142 258,142 L522,142 Q582,142 615,185 L662,265 L662,305 L115,305 Z"/>
+          <path class="cabin-glass" d="M232,182 L272,152 L468,152 L508,182 Z"/>
+          <line class="pillar" x1="350" y1="152" x2="350" y2="182"/>
+          <rect class="roof-rail" x="258" y="134" width="264" height="8" rx="4"/>
+          <rect class="bumper" x="104" y="258" width="22" height="34" rx="5"/>
+          <rect class="bumper" x="654" y="258" width="22" height="34" rx="5"/>
+          <rect class="grille" x="648" y="222" width="18" height="34" rx="2"/>
+          <rect class="headlight" x="652" y="198" width="16" height="11" rx="3"/>
+          <rect class="taillight" x="118" y="200" width="10" height="16" rx="2"/>
+          <text class="badge-text" x="560" y="235">V23</text>
+        </g>
+
+        <g class="wheel" id="wheelBack" style="transform-origin:205px 305px;">
+          <circle class="tyre" cx="205" cy="305" r="47"/>
+          <circle class="rim" cx="205" cy="305" r="27"/>
+          <g class="spokes">
+            <line x1="205" y1="281" x2="205" y2="329"/>
+            <line x1="181" y1="305" x2="229" y2="305"/>
+            <line x1="188" y1="288" x2="222" y2="322"/>
+            <line x1="188" y1="322" x2="222" y2="288"/>
+          </g>
+          <circle class="hub" cx="205" cy="305" r="7"/>
+        </g>
+
+        <g class="wheel" id="wheelFront" style="transform-origin:572px 305px;">
+          <circle class="tyre" cx="572" cy="305" r="47"/>
+          <circle class="rim" cx="572" cy="305" r="27"/>
+          <g class="spokes">
+            <line x1="572" y1="281" x2="572" y2="329"/>
+            <line x1="548" y1="305" x2="596" y2="305"/>
+            <line x1="555" y1="288" x2="589" y2="322"/>
+            <line x1="555" y1="322" x2="589" y2="288"/>
+          </g>
+          <circle class="hub" cx="572" cy="305" r="7"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="stat-bar" id="statBar">
+      <div class="stat-card"><span class="stat-value" data-stat="torque">292</span><span class="stat-unit">Nm</span><span class="stat-label">Max Torque</span></div>
+      <div class="stat-card"><span class="stat-value" data-stat="battery">81.76</span><span class="stat-unit">kWh</span><span class="stat-label">Battery Capacity</span></div>
+      <div class="stat-card"><span class="stat-value" data-stat="range">430</span><span class="stat-unit">km</span><span class="stat-label">EV Range</span></div>
+      <div class="stat-card"><span class="stat-value" data-stat="accel">7.5</span><span class="stat-unit">s</span><span class="stat-label">0-100km/h</span></div>
+      <div class="stat-card"><span class="stat-value" data-stat="power">155</span><span class="stat-unit">kW</span><span class="stat-label">Max Power</span></div>
+    </div>
+  </section>
+
+  <aside class="config-panel" id="configPanel">
+    <div class="panel-scroll">
+      <p class="section-label">Exterior</p>
+      <h2 class="section-title">Colour — <span id="colorName">Warm Orange</span></h2>
+      <div class="swatch-grid" id="swatchGrid"></div>
+
+      <h2 class="section-title small">Wheels — <span id="wheelName">21" Alloy Carbon</span></h2>
+      <div class="wheel-grid" id="wheelGrid"></div>
+
+      <p class="section-label with-divider">Power &amp; Drive</p>
+      <h2 class="section-title small">Drivetrain — <span id="driveName">AWD</span></h2>
+      <div class="segmented" id="driveSegmented"></div>
+
+      <p class="section-label with-divider">Driver Assists</p>
+      <div class="toggle-row"><span>Adaptive Cruise</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+      <div class="toggle-row"><span>Lane Keep Assist</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+      <div class="toggle-row"><span>360 Camera</span><label class="switch"><input type="checkbox"><span class="slider"></span></label></div>
+    </div>
+  </aside>
+</main>
+
+<footer class="summary-bar">
+  <div class="summary-tabs" id="summaryTabs">
+    <span class="tag" id="tagColor">Warm Orange</span>
+    <span class="tag" id="tagDrive">AWD</span>
+    <span class="tag">Driver Assists</span>
+  </div>
+  <div class="summary-info">
+    <span class="model-name">V23</span>
+    <span class="model-desc">Off-roader &nbsp;|&nbsp; 5 seater &nbsp;|&nbsp; 5-star safety rating</span>
+  </div>
+  <div class="summary-finance">
+    <div class="finance-toggle" id="financeToggle">
+      <div class="finance-label">FINANCE</div>
+      <div class="finance-value">$<span id="priceValue">959</span> / mo <svg class="chevron small" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+    </div>
+    <div class="finance-dropdown" id="financeDropdown">
+      <div class="finance-row"><span>Deposit</span><strong>$4,500</strong></div>
+      <div class="finance-row"><span>Term</span><strong>60 months</strong></div>
+      <div class="finance-row"><span>Est. Comparison Rate</span><strong>6.9% p.a.</strong></div>
+    </div>
+  </div>
+  <div class="icon-group">
+    <button class="round-btn" id="saveBtn" title="Save"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></button>
+    <button class="round-btn" id="shareBtn" title="Share"><svg viewBox="0 0 24 24"><path d="M18 8a3 3 0 1 0-2.83-4H15a3 3 0 0 0 .06 2.12L8.9 9.09a3 3 0 1 0 0 5.82l6.16 3a3 3 0 1 0 .77-1.79l-6.16-3a3 3 0 0 0 0-1.24l6.16-3A3 3 0 0 0 18 8Z"/></svg></button>
+  </div>
+  <button class="order-btn" id="orderBtn"><span>ORDER NOW</span></button>
+</footer>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="confetti-layer" id="confettiLayer"></div>
+  <div class="modal-card">
+    <svg class="check-circle" viewBox="0 0 100 100">
+      <circle class="check-ring" cx="50" cy="50" r="44"/>
+      <path class="check-path" d="M28 52 L44 68 L74 34"/>
+    </svg>
+    <h3>Configuration Reserved</h3>
+    <p>Your V23 in <strong id="modalColor">Warm Orange</strong>, <strong id="modalDrive">AWD</strong> is saved. Estimated finance: $<strong id="modalPrice">959</strong>/mo.</p>
+    <button class="order-btn ghost" id="modalClose">CONTINUE BROWSING</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
